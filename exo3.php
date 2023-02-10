@@ -13,11 +13,12 @@ foreach($tab as $value){
     echo "$value" ; 
 }
     moyenneTab($tab);
-    for (int $i = 0;$i<sizeof($tab);$i++){ //error ici :(
+    for ($i = 0;$i<sizeof($tab);$i++){ //error ici :(
         echo"$Basique = array_sum($tab)/count($tab)";
     }
     
     echo "La moyenne est (espérons-le):".$Basique;
 ?>
+
 
 

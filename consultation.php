@@ -25,16 +25,27 @@ try {
     ?>
 
     <form action="" method="post">
-        <select>
-            <?php
+            <select name="idMedecin">
+                <?php
                 foreach ($tabMedecins as $Medecin) {
-            ?>
-                    <option value="<?=$Medecin["id"]?>"> <?=$Medecin["nom"]?> <?=$Medecin["prenom"]?></option>
-            <?php
+                    ?>
+                    <option value="<?=$Medecin["id"]?>"><?=$Medecin["nom"]." ".$Medecin["prenom"]?>s</option>
+                    <?php
                 }
                 ?>
-        </select>
-    <form>
+            </select>
+            <select name="idPatient">
+                <?php
+                foreach ($tabPatients as $Patient) {
+                    ?>
+                    <option value="<?=$Patient["id"]?>"><?=$Patient["nom"]." ".$Patient["prenom"]?>s</option>
+                    <?php
+                }
+                ?>
+            </select>
+            <input type="datetime-local" name="laDate">
+            <input type="submit" value="Saisir une consultation" name="Valider">
+    </form>
 
             
             
